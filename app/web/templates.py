@@ -9,6 +9,10 @@ def get_home_page() -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSA Processor - Walmart</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,7 +21,7 @@ def get_home_page() -> str:
         }
         
         body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #0d1117;
             color: #c9d1d9;
             min-height: 100vh;
@@ -73,14 +77,32 @@ def get_home_page() -> str:
         
         .page-title {
             text-align: center;
-            margin-bottom: 12px;
+            margin-bottom: 20px;
         }
         
         .page-title h1 {
-            font-size: 32px;
-            font-weight: 600;
-            color: #58a6ff;
-            margin-bottom: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0071e3 0%, #00a3ff 50%, #ffc220 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+            text-shadow: 0 0 40px rgba(0, 163, 255, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .page-title .description {
